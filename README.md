@@ -1,5 +1,5 @@
 # takeHome
-Take Home assessment from Endpoint
+Take Home assessment for Endpoint
 
 # In order to run tests on your local
 
