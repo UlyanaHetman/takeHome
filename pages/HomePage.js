@@ -1,4 +1,5 @@
 import { expect } from '@playwright/test';
+import { credentials } from '../data.json';
 
 export class HomePage {
     /**
@@ -15,11 +16,9 @@ export class HomePage {
     }
 
     async login() {
-        const username = 'UlyanaH';
-        const password = '214210Test';
-        await this.usernameInput.fill(username);
-        await this.passwordInput.fill(password);
-        expect(this.usernameInput).toHaveValue(username);
+        await this.usernameInput.fill(credentials[0].username);
+        await this.passwordInput.fill(credentials[0].password);
+        expect(this.usernameInput).toHaveValue(credentials[0].username);
         await this.loginBtn.click();
     }
 
