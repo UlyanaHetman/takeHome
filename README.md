@@ -9,8 +9,8 @@ Take Home assessment for Endpoint
    npm init playwright@latest
 
 3. Run npx commands in VS Code for:
-- running tests in browser: npx playwright test --ui
-- running tests in headless mode: npx playwright test
+- running tests in browser: `npx playwright test --ui`
+- running tests in headless mode: `npx playwright test`
 
 If you notice some tests failed, please re-run one more time. Test flackiness was noticed when running in headless mode due to page loading time. 
 
