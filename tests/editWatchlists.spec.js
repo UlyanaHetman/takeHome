@@ -85,7 +85,6 @@ test.describe.serial('An existing user is able to add and remove article/page fr
 
     test('When user removes one article from the watchlist of 2', async ({ page }) => {
         const watchlistPage = new WatchlistPage(page);
-        const qaArticleTitle = page.getByRole('heading', { name: 'Quality assurance' }).locator('span');
 
         // Verify there are 2 articles in the watchlist
         await watchlistPage.myWatchlistIcon.click();
@@ -97,9 +96,15 @@ test.describe.serial('An existing user is able to add and remove article/page fr
         await expect(watchlistPage.viewAndEditWatchlistTitle).toBeVisible();
         await watchlistPage.javascriptCheckbox.click();
         await watchlistPage.removeTitlesBtn.click();
+    });
+
+    test('Then the watchist is updated accordingly', async ({ page }) => {
+        const watchlistPage = new WatchlistPage(page);
+        const qaArticleTitle = page.getByRole('heading', { name: 'Quality assurance' }).locator('span');
 
         // Verify the Javascript article has been successfully removed and QA article is still displayed
         page.reload(); // according to recommendation on the website
+        await watchlistPage.myWatchlistIcon.click();
         await watchlistPage.viewAndEditWatchlist.click();
         await expect(watchlistPage.javascriptCheckbox).toHaveCount(0);
         await expect(watchlistPage.qaCheckbox).toBeVisible();
