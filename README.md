@@ -1,14 +1,15 @@
 # takeHome
 Take Home assessment from Endpoint
 
-# Note 
-In order to run tests 
+# In order to run tests on your local
 
-1. Install Playwright using npm:
+1. Clone the repo to your local
+
+2. Install Playwright using npm:
    npm init playwright@latest
 
-2. Run npx commands for:
-- run tests in browser: npx playwright test --ui
-- run tests in headless mode: npx playwright test
+3. Run npx commands in VS Code for:
+- running tests in browser: npx playwright test --ui
+- running tests in headless mode: npx playwright test
 
-If you notice some tests failed, please re-run one more time. Flackey tests were noticed when running in headless mode due to page load time. 
+If you notice some tests failed, please re-run one more time. Test flackiness was noticed when running in headless mode due to page loading time. 
