@@ -6,7 +6,7 @@ Take Home assessment for Endpoint
 1. Clone the repo to your local
 
 2. Install Playwright using npm:
-   npm init playwright@latest
+   `npm init playwright@latest`
 
 3. Run npx commands in VS Code for:
 - running tests in browser: `npx playwright test --ui`
